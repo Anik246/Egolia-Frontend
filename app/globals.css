@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* default to the landing page dark look */
+  --background: #050606;
+  --foreground: rgba(255, 255, 255, 0.92);
 }
 
 @theme inline {
@@ -12,11 +13,16 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* keep this if you want, but make it still dark */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #050606;
+    --foreground: rgba(255, 255, 255, 0.92);
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
